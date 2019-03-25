@@ -36,7 +36,7 @@ class User:
 		url = 'https://cas.hdu.edu.cn/cas/login?service=http://jxgl.hdu.edu.cn/default.aspx'
 		CaptchaUrl = "http://cas.hdu.edu.cn/cas/Captcha.jpg"
 		# 获取登录页面
-		r = self.get(url)
+		r = self.get('http://jxgl.hdu.edu.cn/index.aspx')
 
 		soup = BeautifulSoup(BeautifulSoup(r.text,'lxml').find('script', id="password_template").text, 'lxml')
 
